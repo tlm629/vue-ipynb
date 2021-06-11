@@ -1,0 +1,11 @@
+{
+    "plugins": [
+        [
+            "prismjs",
+            {
+                "languages": ["html", "css", "javascript", "python"],
+                "plugins": ["line-numbers"]
+            }
+        ]
+    ]
+}

@@ -1,24 +1,49 @@
 # vue-ipynb
+一个Demo，利用 `jsvine/notebookjs` 在VUE中展示 `ipynb` 文件，并作代码高亮。
+Demo to view a `.ipynb` (python notebook) file with VUE.
 
-## Project setup
+
+# How to Use
+
+### Install
+```
+npm install marked ansi_up dompurify jsdom
+npm install prismjs 
+npm install babel-plugin-prismjs 
+```
+
+### Config 
+Config `.babelrc` file of your VUE project
+
+```json
+{
+    "plugins": [
+        [
+            "prismjs",
+            {
+                "languages": ["html", "css", "javascript", "python"],
+                "plugins": ["line-numbers"]
+            }
+        ]
+    ]
+}
+```
+
+### Copy files
+Copy this files to project:
+- prism.css
+- notebook.js
+
+### Run and View .ipynb file
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
+view:
+http://localhost:8080/ 
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Thanks
+Many thanks to the following users for catching bugs, fixing typos, and proposing useful features:
+https://github.com/jsvine/notebookjs
+https://prismjs.com/
